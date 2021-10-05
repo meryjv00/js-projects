@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra Papel o Tijera</title>
+    <!--Link CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--JavaScript-->
+    <script src="js/index.js"></script>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!--Header Score-->
+        <div class="scoreboard">
+            <!--Title-->
+            <div class="title">
+                <img src="assets/title.png" alt="title">
+            </div>
+            <!--Score-->
+            <div class="score">
+                <p>PUNTOS</p>
+                <h1>0</h1>
+            </div>
+        </div>
+
+        <!--Hands: Rock, Papers, Scissors-->
+        <div class="hands">
+            <!--Rock-->
+            <div class="hand rock">
+                <img class="img_resize" src="assets/Rock.png" alt="rock" onclick="pickUserHand('rock')">
+            </div>
+            <!--Paper-->
+            <div class="hand paper">
+                <img class="img_resize" src="assets/Paper.png" alt="paper" onclick="pickUserHand('paper')">
+            </div>
+            <!--Scissors-->
+            <div class="hand scissors">
+                <img class="img_resize" src="assets/Scissors.png" alt="scissors" onclick="pickUserHand('scissors')">
+            </div>
+        </div>
+
+        <!--Results-->
+        <div class="contest">
+            <!--Picked by user-->
+            <div class="userhand">
+                <h1 class="rdo">HAS ELEGIDO</h1>
+                <div class="handImgContainer">
+                    <img class="img_resize_2" id="userPickedImage" src="">
+                </div>
+            </div>
+
+            <!--Result-->
+            <div class="result">
+                <!--Result text-->
+                <div class="decision">
+                    <h1>HAS GANADO!</h1>
+                </div>
+                <!--Button Play again-->
+                <div class="newGame" onclick="newGame()">
+                    Jugar otra vez
+                </div>
+            </div>
+
+            <!--Picked by machine-->
+            <div class="machine">
+                <h1 class="rdo">CP HA ELEGIDO</h1>
+                <div class="handImgContainer">
+                    <img class="img_resize_2" id="machinePickedImage" src="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
